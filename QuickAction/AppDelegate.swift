@@ -48,5 +48,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        print("🔥 quick action has been performed !!!!!")
+        if shortcutItem.type == "com.quickaction" {
+            print("🔥 shortcutItem: \(shortcutItem.localizedTitle)")
+        }
+    }
+    
 }
 
